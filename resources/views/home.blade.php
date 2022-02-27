@@ -83,5 +83,59 @@
             </div>
         </div>
     </div>
+
+    <div class="row justify-content-center mt-5">
+        <div class="col-md-12">
+
+            <div class="card mt-6" style="matgin-top:15px">
+                <div class="card-header">
+                    <b>List Data Nota</b>
+                </div>
+                <div class="card-body">
+                    <table class="table table-hover table-responsive">
+                        <thead>
+                          <tr>
+                            <th scope="col">#</th>
+                            <th scope="col">Nama Supplier</th>
+                            <th scope="col">Supplier Produk</th>
+                            <th scope="col">Alamat</th>
+                            <th scope="col">Keperluan</th>
+                            <th scope="col">Tanggal</th>
+                            <th scope="col">Aksi</th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                          <tr>
+                            <th scope="row">1</th>
+                            <td>Mark</td>
+                            <td>Otto</td>
+                            <td>@mdo</td>
+                            <td>@mdo</td>
+                            <td>@mdo</td>
+                            <td>@mdo</td>
+                          </tr>
+                          <tr>
+                            <th scope="row">2</th>
+                            <td>Jacob</td>
+                            <td>Thornton</td>
+                            <td>@fat</td>
+                            <td>@mdo</td>
+                            <td>@mdo</td>
+                            <td>@mdo</td>
+                          </tr>
+                          <tr>
+                            <th scope="row">3</th>
+                            <td colspan="2">Larry the Bird</td>
+                            <td>@twitter</td>
+                            <td>@mdo</td>
+                            <td>@mdo</td>
+                            <td>@mdo</td>
+                          </tr>
+                        </tbody>
+                      </table>
+                </div>
+            </div>
+        </div>
+    </div>
 </div>
 @endsection
