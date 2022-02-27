@@ -15,6 +15,16 @@ class CreateTableNota extends Migration
     {
         Schema::create('table_nota', function (Blueprint $table) {
             $table->id();
+            $table->string('nama')->nullable();
+            $table->string('produk')->nullable();
+            $table->string('alamat')->nullable();
+            $table->string('keperluan')->nullable();
+            $table->string('tagihan')->nullable();
+            $table->string('bdt')->nullable();
+            $table->string('keterangan')->nullable();
+            $table->string('admin')->nullable();
+            $table->date('tanggal')->nullable();
+            $table->string('jam')->nullable();
             $table->timestamps();
         });
     }
