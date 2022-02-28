@@ -1,6 +1,9 @@
 <?php
 
 namespace App\Http\Controllers;
+use App\Models\NotaModel;
+use Illuminate\Pagination\Paginator;
+
 
 use Illuminate\Http\Request;
 
@@ -23,6 +26,11 @@ class HomeController extends Controller
      */
     public function index()
     {
-        return view('home');
+        Paginator::useBootstrap();
+        $batas = 5;
+        $jumlahnota = NotaModel::count();
+        $datanota = NotaModel::orderBy('id','desc')->paginate($batas);
+        $no = $batas * ($datanota->currentPage() - 1);
+        return view('home', compact('datanota', 'no', 'jumlahnota'));
     }
 }

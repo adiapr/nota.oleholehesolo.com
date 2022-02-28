@@ -8,4 +8,6 @@ use Illuminate\Database\Eloquent\Model;
 class NotaModel extends Model
 {
     use HasFactory;
+
+    protected $table = 'table_nota';
 }

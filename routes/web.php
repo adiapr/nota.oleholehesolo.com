@@ -1,6 +1,9 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\HomeController;
+use App\Http\Controllers\NotaController;
+use App\Http\Controllers\UploadFileController;
 
 /*
 |--------------------------------------------------------------------------
@@ -13,13 +16,20 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+// Route::get('/', function () {
+//     return view('welcome');
+// });
+
+//call the controller and its method
+Route::get('/upload-form', [UploadFileController::class, 'index']);
+Route::any('/upload', [UploadFileController::class, 'upload']);
 
 Auth::routes([
     'register' => false,
     'reset' => false
 ]);
 
-Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+Route::get('/', [HomeController::class, 'index']);
+
+Route::post('/nota/add',            [NotaController::class, 'notaAdd']);
+Route::post('/nota/delete/{id}',    [NotaController::class, 'notaDelete']);
